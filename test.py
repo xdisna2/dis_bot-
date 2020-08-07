@@ -20,4 +20,4 @@ async def on_message(message):
         await  message.channel.send('Hello!')
 
 # Runs the bot with our LOGIN Token
-client.run('NzMxNjcxNTUxMDk5MDExMDgy.XwpcOw.pc1oRaY0Qdy9CrhWTyrnN2WOAug')
+client.run('')
