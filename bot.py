@@ -2,6 +2,7 @@
 
 import discord
 from discord.ext import commands
+import random
 
 # Bot command
 client = commands.Bot(command_prefix = '$')
@@ -33,5 +34,12 @@ async def convo(ctx):
     await ctx.send('Hello there!')
     await ctx.send(f'My Latency is {round(client.latency * 1000)}ms ')
 
+# Create a magical 8 ball command with different aliases that can be accepted for the command invoke
+@client.command(aliases=['8ball', 'eightball'])
+async def _8ball(ctx, *, question):
+    responses = ['Yes', 'No', 'Maybe']
+    await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
+
+
 # Runs the bot and please put in Bot TOKEN
-client.run('NzMxNjcxNTUxMDk5MDExMDgy.XwpcOw.mBvQatZBpVN4ZC56SawIobNfe5s')
+client.run('')
